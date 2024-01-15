@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
+}
+
+@font-face {
+    font-family: 'Retro Gaming';
+    src: url('Retro\ Gaming.eot');
+    src: url('Retro\ Gaming.eot') format('embedded-opentype'),
+         url('Retro\ Gaming.woff2') format('woff2'),
+         url('Retro\ Gaming.woff') format('woff'),
+         url('Retro\ Gaming.ttf') format('truetype'),
+         url('Retro\ Gaming.svg#RetroGaming') format('svg');
+
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    background-color: #100e2b;
+    overflow: hidden;
+}
+
+#work{
+    position: relative;
+    margin: 0 auto;
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.content h2 {
+  display: flex;
+  font-size: 12vw;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Retro Gaming";
+  padding-left: 10vw;
+}
+
+.text_shadows {
+  text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary),
+    6px 6px var(--color-quaternary), 8px 8px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10%, 90% {
+    text-shadow: 2px 2px 0 var(--color-secondary);
+  }
+  20%, 80% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary);
+  }
+  30%, 70% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary);
+  }
+  40%, 60% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary),
+      8px 8px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary),
+      8px 8px 0 var(--color-quinary);
+  }
+}
+
+@keyframes move {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-8px, -8px);
+  }
+}
+
+.border-word {
+  position: fixed;
+  font-size: 20px;
+  font-family: 'Retro Gaming';
+  color: white;
+  padding-left: 5vw;
+  padding-top: 10px;
+  padding-bottom: 2vh;
+  padding-right: 5vw;
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .content h2{
+    padding-top: 5vh;
+    padding-left: 6vw;
+
+  }
+}

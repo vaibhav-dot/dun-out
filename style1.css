@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
+}
+
+@font-face {
+    font-family: 'upheavtt';
+    src: url('upheavtt.eot');
+    src: url('upheavtt.eot') format('embedded-opentype'),
+         url('upheavtt.woff2') format('woff2'),
+         url('upheavtt.woff') format('woff'),
+         url('upheavtt.ttf') format('truetype'),
+         url('upheavtt.svg#upheavtt') format('svg');
+}
+
+@font-face {
+    font-family: 'Retro Gaming';
+    src: url('Retro\ Gaming.eot');
+    src: url('Retro\ Gaming.eot') format('embedded-opentype'),
+         url('Retro\ Gaming.woff2') format('woff2'),
+         url('Retro\ Gaming.woff') format('woff'),
+         url('Retro\ Gaming.ttf') format('truetype'),
+         url('Retro\ Gaming.svg#RetroGaming') format('svg');
+
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    background-color: #100e2b;
+}
+
+#work{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 95%;
+    height: 100vh;
+    max-width: 1920px;
+    background-color: #100e2b;
+}
+
+#work p{
+    font-family: "Retro Gaming";
+    padding-right: 35%;
+    line-height: 2vh;
+    color: white;
+    text-align: center;
+    padding-right: 35%;
+    padding-left: 35%;
+    font-size: 10px;
+}
+
+#work br{
+    line-height:22px;
+}
+
+.content h2 {
+  display: flex;
+  font-size: 7vw;
+  align-content: center;
+  justify-content: center;
+  font-family: "Retro Gaming";
+  padding-left: 4vw;
+}
+
+.text_shadows {
+  text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary),
+    6px 6px var(--color-quaternary), 8px 8px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10%, 90% {
+    text-shadow: 2px 2px 0 var(--color-secondary);
+  }
+  20%, 80% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary);
+  }
+  30%, 70% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary);
+  }
+  40%, 60% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary),
+      8px 8px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 2px 2px 0 var(--color-secondary),
+      4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary),
+      8px 8px 0 var(--color-quinary);
+  }
+}
+
+@keyframes move {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-8px, -8px);
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #work p{
+        padding-top: 5vh;
+        padding-right: 15%;
+        padding-left: 15%;
+    }
+}

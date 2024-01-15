@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'upheavtt';
+    src: url('upheavtt.eot');
+    src: url('upheavtt.eot') format('embedded-opentype'),
+         url('upheavtt.woff2') format('woff2'),
+         url('upheavtt.woff') format('woff'),
+         url('upheavtt.ttf') format('truetype'),
+         url('upheavtt.svg#upheavtt') format('svg');
+}
+
+@font-face {
+    font-family: 'Retro Gaming';
+    src: url('Retro\ Gaming.eot');
+    src: url('Retro\ Gaming.eot') format('embedded-opentype'),
+         url('Retro\ Gaming.woff2') format('woff2'),
+         url('Retro\ Gaming.woff') format('woff'),
+         url('Retro\ Gaming.ttf') format('truetype'),
+         url('Retro\ Gaming.svg#RetroGaming') format('svg');
+
+}
+
+@font-face {
+    font-family: 'TorontoGothic';
+    src: url('TorontoGothic.eot');
+    src: url('TorontoGothic.eot') format('embedded-opentype'),
+         url('TorontoGothic.woff2') format('woff2'),
+         url('TorontoGothic.woff') format('woff'),
+         url('TorontoGothic.ttf') format('truetype'),
+         url('TorontoGothic.svg#TorontoGothic') format('svg');
+}
+@font-face {
+    font-family: "KungFuMaster3DItalic-MV7KP";
+    src: url(KungFuMaster3DItalic-MV7KP.otf);
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+}
+
+#back {
+    pointer-events: all;
+    position: relative;
+    width: 100%; 
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    background-color: #100e2b;
+}
+
+.morph-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Added transition for smooth initial fade-in */
+}
+
+.morph-image.hidden {
+    opacity: 0;
+}
+
+#top {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#work{
+    position: relative;
+    margin: 0 auto;
+    width: 95%;
+    height: 100vh;
+    max-width: 1920px;
+}
+
+#nav{
+    pointer-events: all;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 12vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#scroll{
+    display: flex;
+    width: 100%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border: .5px solid #ffffff;
+}
+.scrolling_text {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+}
+
+.text {
+    font-family: "Retro Gaming";
+    font-size: 13px;
+    color: #ffffff;
+    animation: animate_text 30s linear infinite;
+}
+.text span {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+@keyframes animate_text {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+}
+
+#nleft, #nright{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+#nav a{
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: "upheavtt";
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+#nav img{
+    width: 10vw;
+}
+
+#hero {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 5px;
+}
+
+#heroleft{
+    min-width: 50%;
+}
+
+#heroleft .elem{
+    height: 7vw;
+    overflow: hidden;
+    padding-bottom: 20px;
+    
+}
+
+#heroleft .elem h1{
+    line-height: .9;
+    font-family: "TorontoGothic";
+    color: #ffffff;
+    font-size: 8vw;
+}
+
+#heroleft .button{
+    pointer-events: all;
+    position:relative;
+    display:inline-block;
+}
+
+#heroleft .button a{
+    pointer-events: all;
+    text-decoration: none;
+    margin-top: 2vw;
+    padding: .8vw 2vw;
+    font-size: 2.5vw;
+    font-family: 'TorontoGothic';
+    background-color:#FFA12B;
+    display:block;
+    position:relative;
+    padding:20px 40px;
+  
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+     border-radius: 5px;
+}
+
+#heroleft .button a:active{
+    top:10px;
+    background-color:#F78900;
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+#heroleft .button:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+     border-radius: 5px;
+}
+
+#heroright{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 25%;
+    color: white;
+    font-family: "Retro Gaming" ;
+}
+
+
+#footer{
+    position: absolute;
+    background-color: #100e2b;
+    margin-right: 20%;
+    top: 90%;
+    bottom: 5%;
+    transform: translate(0%, -100%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#footer b{
+    font-family: "Retro Gaming";
+    text-align: center;
+    font-size: 1.5vw;
+    color: white;
+}
+
+mark {
+    color:#ffffff;
+    -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
+            animation: 1.5s highlight 1.5s 1 normal forwards;
+    background-color: none;
+    background: linear-gradient(90deg, #100e2b 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+  }
+  
+  @-webkit-keyframes highlight {
+    to {
+      background-position: 0 0;
+    }
+  }
+  
+  @keyframes highlight {
+    to {
+      background-position: 0 0;
+    }
+  }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #work{
+        width:100%;
+    }
+    #nav img{
+        padding-left: 1vw;
+        width: 25vw;
+    }
+    #nav{
+        height: 10vh;
+        margin-bottom: -1vh;
+        z-index: 1;
+    }
+    #back img{
+        object-fit: contain;
+    }
+    
+    #nav a{
+        font-size: 5vw;
+        text-align: center;
+        padding-right: 3vw;
+    }
+
+    #nleft, #nright{
+        gap: 10vw;
+    }
+    
+    #heroleft .elem{
+        height: 15vw;
+        overflow: hidden;
+        padding-bottom: 1vw;
+        
+    }
+
+    #heroleft .elem h1{
+        color: #ffffff;
+        font-size: 14vw;
+        padding-left: 5vw;
+    }
+
+    #heroright p{
+        display: none;
+    }
+
+    #heroleft .button a{
+        margin-left: 5vw;
+        padding: .8vw 2vw;
+        font-size: 6vw;
+    }
+
+    #scroll{
+        z-index: 2;
+    }
+
+    #footer b{
+        margin-top: 1vw;
+        font-size: 1.5vw;
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
+
+
+}
+
